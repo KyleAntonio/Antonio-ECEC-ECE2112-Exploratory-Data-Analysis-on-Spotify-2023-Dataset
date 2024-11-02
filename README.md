@@ -5,7 +5,8 @@ Table of Contents:
 
 - [About the Project](#about-the-project)
 - [General Overview](#general-overview)
-- [Top Performers & Basic Descriptive Statistics](#top-performers--basic-descriptive-statistics)
+- [Top Performers](#top-performers)
+- [Basic Descriptive Statistics](#basic-descriptive-statistics)
   
 ## About the Project
 In this project, a data set containing various information on the top songs on Spotify for the year 2023 is given from a database website, Kaggle.com. This documentation will show the various findings after the dataset has been applied with basic statistical treatment and data visualization tools using Python.
@@ -34,7 +35,7 @@ Upon observing the information on the data set further, we can notice that there
 ![{C0700D8C-65F3-42E2-9B3C-35C7AD51323B}](https://github.com/user-attachments/assets/fd70971d-dfb3-4ac9-b3b8-6a326de1e969)
 
 
-## Top Performers & Basic Descriptive Statistics
+## Top Performers
 The most logical first step in analyzing this dataset would therefore be to sort the track by the number of streams in descending order using the ".sort_values()" attribute in Pandas. However a problem arises as one of the tracks appears to have a non-numeric value and as such appears to be on top of the list. 
 
 ![{1DB0669F-23B3-4FC7-9C2E-A006970517C5}](https://github.com/user-attachments/assets/e13c86df-949d-4dad-b11f-ee74c1b7d270)
@@ -43,4 +44,23 @@ Additionally, when observing the sorted list, the supposed top five tracks have 
 
 ![{8575405C-B485-4EE4-89D7-FE3363C7A9F5}](https://github.com/user-attachments/assets/c41e3c07-df16-4d75-b2ed-964c003edc6a)
 
-Referring back to the data type info in the previous section, we can see that the streams column is assigned string values as opposed to integer values which one would might assume for this situation. For the purpose of analyzing the data in later sections, it is vital that this is to be converted to numeric values and for the erroneous data to be replaced with a corresponding numeric value, which in this case, 0 as it is difficult to determine the real value without compromising the entire datset.
+To fix these inconsistencies, a numeric value in string data-type for the problem track must first be assigned. In this case, it shall be assigned to 0 as it is effectively unknown in the context of this data set and doing so will place it at the bottom when the set is sorted by the number of streams.
+
+![{78F5BE98-5C74-42CD-9F60-98AB1CC81C1D}](https://github.com/user-attachments/assets/a729b33c-7fe1-48e8-bc58-4c690782c1a0)
+
+Then, the values for the streams column must be converted to a numeric data-type in order for it to be accurately sorted. Initially, using an integer data type will yield the following error:
+
+![{056ADE63-63A0-4FDE-B558-F95A3B5453B9}](https://github.com/user-attachments/assets/09ebdccc-a99f-4306-96c4-cb16e0bbc48f)
+
+This may potentially be because of how large the numeric values of the strings to be converted in the streams column therefore floating point data-type is more appropriate.
+
+![{F4A88160-F4BE-4083-99D4-99702FE1E7BC}](https://github.com/user-attachments/assets/7739d5dd-84fb-444f-a020-363f4d0f287a)
+
+After this, we can simply sort it again and use the .head() attribute to determine the top performing tracks by stream count which yields the following songs and their artists:
+
+![{8EE9315E-718E-4987-A9BC-E5087EEE75B4}](https://github.com/user-attachments/assets/5cd982b4-b92d-48fa-b342-dc77ba9ef048)
+![{914B3CE6-02C4-4025-A6F3-4EA57A699A3F}](https://github.com/user-attachments/assets/49c749db-416e-4fc3-bf1f-226508c890c5)
+
+## Basic Descriptive Statistics
+
+
