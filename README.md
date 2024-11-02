@@ -5,7 +5,7 @@ Table of Contents:
 
 - [About the Project](#about-the-project)
 - [General Overview](#general-overview)
-- [Top Performers & Basic Descriptive Statistics](#top-performers-&-basic-descriptive-statistics)
+- [Top Performers & Basic Descriptive Statistics](#top-performers--basic-descriptive-statistics)
   
 ## About the Project
 In this project, a data set containing various information on the top songs on Spotify for the year 2023 is given from a database website, Kaggle.com. This documentation will show the various findings after the dataset has been applied with basic statistical treatment and data visualization tools using Python.
@@ -38,5 +38,9 @@ Upon observing the information on the data set further, we can notice that there
 The most logical first step in analyzing this dataset would therefore be to sort the track by the number of streams in descending order using the ".sort_values()" attribute in Pandas. However a problem arises as one of the tracks appears to have a non-numeric value and as such appears to be on top of the list. 
 
 ![{1DB0669F-23B3-4FC7-9C2E-A006970517C5}](https://github.com/user-attachments/assets/e13c86df-949d-4dad-b11f-ee74c1b7d270)
+
+Additionally, when observing the sorted list, the supposed top five tracks have less streams than one of the song in the bottom five tracks. Referring back to .info() output of the data set, we can see that this column is, in fact, in string data-type format as opposed to a numeric data-type like an integer or floating point thus it may be the cause of this problem.
+
+![{8575405C-B485-4EE4-89D7-FE3363C7A9F5}](https://github.com/user-attachments/assets/c41e3c07-df16-4d75-b2ed-964c003edc6a)
 
 Referring back to the data type info in the previous section, we can see that the streams column is assigned string values as opposed to integer values which one would might assume for this situation. For the purpose of analyzing the data in later sections, it is vital that this is to be converted to numeric values and for the erroneous data to be replaced with a corresponding numeric value, which in this case, 0 as it is difficult to determine the real value without compromising the entire datset.
