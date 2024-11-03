@@ -6,6 +6,7 @@ Table of Contents:
 - [About the Project](#about-the-project)
 - [General Overview](#general-overview)
 - [Top Performers](#top-performers)
+   - [Summary](#in-summary)
 - [Basic Descriptive Statistics](#basic-descriptive-statistics)
   
 ## About the Project
@@ -27,7 +28,8 @@ From the image below, we can see that there are over **953 rows** and **24 colum
 
 *.info() output of the given data set:*
 
-![{A73384C0-0D59-4996-8315-1456465D658F}](https://github.com/user-attachments/assets/903a170d-e1a2-4bd1-a964-3b9dc4a82e4e)
+![{4ADC5569-2A7A-4D58-BA13-C8066CFA97F6}](https://github.com/user-attachments/assets/f6be3559-c2ea-4ee7-99ea-ca857d1c8fd2)
+
 
 Upon observing the information on the data set further, we can notice that there are two columns that have a non-null count less than that of the total number of tracks. This indicates that in these columns, there are tracks with missing values. To be precise, there are **85 missing key values** and **50 missing in_shazam_charts values**.
 
@@ -61,6 +63,40 @@ After this, we can simply sort it again and use the .head() attribute to determi
 ![{8EE9315E-718E-4987-A9BC-E5087EEE75B4}](https://github.com/user-attachments/assets/5cd982b4-b92d-48fa-b342-dc77ba9ef048)
 ![{914B3CE6-02C4-4025-A6F3-4EA57A699A3F}](https://github.com/user-attachments/assets/49c749db-416e-4fc3-bf1f-226508c890c5)
 
+Using the .value_counts attributes included in Pandas, the number of songs written by an artist can be attained with the following syntax:
+
+![{29901D62-669E-4816-B4CD-707838FBDC8F}](https://github.com/user-attachments/assets/f882dcc3-6bd6-4eb3-afef-e95b30844121)
+
+.head(5) can then be used to get the top 5 artists with the most written songs in the dataset:
+
+![{B5336841-46F8-4A86-B373-BA4887DFD2C3}](https://github.com/user-attachments/assets/c6b577b7-e68d-436d-946b-558cd59d6aa2)
+### In Summary:
+The Top Performing Songs by Stream Count Are:
+- 1st: Blinding Lights by The Weeknd (3.7b)
+- 2nd: Shape of You by Ed Sheeran (3.56b)
+- 3rd: Someone You Loved by Lewis Capaldi (2.88b)
+- 4th: Dance Monkey by Tones and I (2.86b)
+- 5th: Sunflower - Spider-Man: Into the Spider-Verse by	Post Malone & Swae Lee (2.80b)
+
+The Top Artists with the Most Written Songs:
+- 1st: Taylor Swift (34)
+- 2nd: The Weeknd (22)
+- 3rd: Bad Bunny & SZA (19)
+- 4th: Harry Styles (17)
+- 5th: Kendrick Lamar (12)
+  
 ## Basic Descriptive Statistics
+Now that the streams count have numeric values, it can now be easily treated with basic descriptive statistics. To do this, the streams column will be called and the built-in attributes for mean, median, and mode in pandas can be used.
+
+![{31DD6ECA-EB2A-4B20-9839-64603F56FBBA}](https://github.com/user-attachments/assets/21749674-7db0-4487-969f-9072f330b796)
+
+The output is then printed and the results came out as: 
+
+![{31DDA72A-11F2-471F-AFDE-74ECA666C774}](https://github.com/user-attachments/assets/b61cf148-f3df-4a7b-bb09-14091f47ab96)
+
+From the results above, it was determined that the approximate values of the basic descriptive statistics of the stream count were:
+- **Mean**: 513.60 million
+- **Median**: 290.23 million
+- **Standard Deviation:** 566.80 million
 
 
