@@ -113,9 +113,7 @@ Based on the results above, here are the Basic Descriptive Statistics of the Str
 
 The average streams of the top songs of 2023 were 513.6 million. To put this into perspective, if the average song length is three minutes, the combined total listening time of only the average streams is about 2,934 years. However, it should be noted that the standard deviation is significantly high which may indicate that there is a significant level of variety in the stream counts of the tracks in the data set. This is supported by the median being significantly lower than the mean, indicating that the stream counts per track are distributed more in higher values than in lower values.
 
-The distribution of the tracks by release year and the number of artists on a track can then be extracted from the data set by plotting them on a histogram respectively. Here, we will use Matplotlib to achieve this:
-
-From the graph below, we can see that there are far more songs that were released in the last 20 years all the combined total of the years before 2000. This may, in part, be due to Spotify mostly catering to demographics that are more versed in the internet and social-media in general thus their song preferences tend to be those that are popular in recent decades. It should be noted that there are outliers as early as the 1940s that are included in the dataset. These songs might be tracks that were popularized my social-media or classics that are associated with the holiday season.
+The distribution of the tracks by release year and the number of artists on a track can then be extracted from the data set by plotting them on a histogram respectively using Matplotlib. From the graph below, we can see that there are far more songs that were released in the last 20 years all the combined total of the years before 2000. This may, in part, be due to Spotify mostly catering to demographics that are more versed in the internet and social-media in general thus their song preferences tend to be those that are popular in recent decades. It should be noted that there are outliers as early as the 1940s that are included in the dataset. These songs might be tracks that were popularized my social-media or classics that are associated with the holiday season.
 
 ![{B4F41631-0765-494C-B024-59BDC6C01BEC}](https://github.com/user-attachments/assets/5a097319-5b16-47d2-8c48-52f645c89353)
 
@@ -145,6 +143,40 @@ After assigning the X and Y values, Matplotlib can be used to plot these values.
 ![{BEB2DB40-7838-4659-B934-650464AA3283}](https://github.com/user-attachments/assets/67b349fe-32c0-4815-9210-beafe05dfc77)
 
 ## Genre and Music Characteristics
+The different attributes that the data set contains can be examined by looking at the co-rrelation between their different combinations. Matplotlib will once again be used to generate a scatterplot for this purpose. The initial step is to assign variables to the values of the attributes so that it would be easy to manipulate the generated scatter-plot:
+
+![{C0E21E19-0A1D-420C-A691-2C8AAE854F9F}](https://github.com/user-attachments/assets/c02765e5-f012-44c7-9e9b-054328b26c8d)
+
+Using Matplotlib, a scatterplot is then generated and formatted as the following. Note that the regression-coefficient was also computed using the .corr() attribute in pandas in order to have a better sense of the graph. This is then repeated for every combination of attributes that are to be tested.
+
+![{34800FC3-756F-43C2-887C-1F25C4A16D3D}](https://github.com/user-attachments/assets/4882d7e5-984d-4b7f-8169-aecca7eb8b05)
+
+Based on the results of the graph, none of the combination of attributes appear to have a significant co-rrelation for a relationship to be established. However, the following should be noted:
+
+### Streams as a Function of BPM
+Majority of the most streamed songs on the data-set appear to cluster around between the BPMs of 80 to 140. This suggests that songs with a balance between slow and lively melodies tended to be streamed more.
+
+![{86F7821C-2A64-4055-8B7C-CD967194DBC6}](https://github.com/user-attachments/assets/da74b9cc-a966-4907-8f39-d6928be750a0)
+
+### Streams as a Function of Danceability
+The correlation between the number of streams and danceability is the strongest out of all that were tested against the number of streams. The most streamed songs tended to cluster around the danceability percentage of 50 to 90%. This suggests that songs tended to be streamed more if people are able to dance to it.
+
+![{BAB32AA0-DDD3-4D98-84FC-775C9BA578FD}](https://github.com/user-attachments/assets/956f491c-c0fd-4eda-a20b-0970513b262b)
+
+### Streams as a Function of Energy
+Songs tended to cluster around the energy percentages of 40% to 90%. This suggests that songs that are perceived to be livelier tended to perform better.
+
+![{8C498A55-4232-4D8B-83CB-E9A1563A244D}](https://github.com/user-attachments/assets/22e657ff-d118-46da-9b82-359170968274)
+
+### Danceability as a Function of Energy
+While the regression co-efficient appears to be statistically insignificant, the correlation between danceability and energy was the highest recorded relationship out of all that were tested. Songs with high perceived danceability percentages tended to cluster around the high energy percentages. This suggests that the higher perceived danceability songs are the songs that also tended to be livelier. This may, in turn, suggest that songs that are danceable and lively tended to perform better based on the previous tests for streams vs. danceability or energy.
+
+![{054DBBE3-D34F-46BD-9F9D-C6BC83FF8C06}](https://github.com/user-attachments/assets/2fc4448f-9af0-44ff-b800-3bce7c524e3e)
+
+### Valence as a Function of Acousticness
+Based on the results, it is quite difficult to determine the exact relationship between valence and acousticness. However, it should be noted that the songs with less acoustics tended to have a higher valence or positivity in its contents. This suggests that songs become more solemn or sad the more acoustics that are being used.
+
+![{84306FE5-F4EF-44E7-8F39-C2FCC1EEFD94}](https://github.com/user-attachments/assets/47362e7b-fd4f-47a4-a61c-25ae2a3c5282)
 
 ## Platform Popularity
 
