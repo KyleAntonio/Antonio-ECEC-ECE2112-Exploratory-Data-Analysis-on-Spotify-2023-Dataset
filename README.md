@@ -84,6 +84,7 @@ Using the .value_counts attributes included in Pandas, the number of songs writt
 ![{B5336841-46F8-4A86-B373-BA4887DFD2C3}](https://github.com/user-attachments/assets/c6b577b7-e68d-436d-946b-558cd59d6aa2)
 
 ### Results:
+Based on the results, it can be observed that the top performing artists and songs are all pre-dominantly in the genre of pop.
 
 The Top Performing Songs by Stream Count Are:
 - 1st: Blinding Lights by The Weeknd (3.7b)
@@ -196,7 +197,7 @@ Based on the given results, it can be observed that spotify has a larger playlis
 ![{33CD4E72-72F3-4F12-BF1B-CF8A5E08006B}](https://github.com/user-attachments/assets/48e5ca14-579f-4c6e-ac01-69d88a9b3d3c)
 
 ## Advanced Analysis
-The key and the mode of the tracks in the data set can also be examined to see which streams better on average. The same approach as the previous section will be used. However, the .pivot() attribute will be needed in order to get all the unique values and to determine the average streams for every key or mode. This is also repeated when comparing which artists and their inclusin in spotify playlists. However, solo-artists will the only ones that will be included as they are the majority in the data set with the top five most streamed songs also being written by solo-artists.
+The key and the mode of the tracks in the data set can also be examined to see which streams better on average. The same approach as the previous section will be used. However, the .pivot() attribute will be needed in order to get all the unique values and to determine the average streams for every key or mode. This is also repeated when comparing which artists and their inclusin in spotify playlists. However, solo-artists or bands will the only ones that will be included as they are the majority in the data set with the top five most streamed songs also being written by solo-artists.
 
 ### Results:
 Based on the output table, the most streamed songs on average are in the key of C# which has an advantage of 27 million to 51 million streams compared to E, D#, and A#.
@@ -207,4 +208,9 @@ Songs that were written on the Major scale also has a slight advantage over thos
 
 ![{584ECE9B-265F-4D12-A16B-92F991D0CA98}](https://github.com/user-attachments/assets/34879f18-7ac5-4d2f-8e04-68b5f852c771)
 
+As for the most commonly included solo-artists/bands in spotify playlists, it can be observed that the majority of them are old rock/pop bands from the 1980s to early 2000s.
+
+![{EB08E7F2-796D-4851-9BAF-9411E406257D}](https://github.com/user-attachments/assets/04c08382-7c21-43ec-b1b9-1742ee80320e)
+
 ## Conclusion
+Based on the findings from the data set, an ideal song that can garner the most streams must be upbeat, lively, and has a high perceived energy and danceability. However, it should neither be too slow nor too fast of a BPM. In order to maximize reachability, it is best to opt for spotify as the streaming platform and it must also be in the pop genre.
